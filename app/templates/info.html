@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content%}
+<body class="{{team_info.Name}}">
+
+    <a href="{% url "main" %}"><button class="back_btn"> back </button></a>
+        <div class="info">
+            <p>
+                {{team_info.Name}}
+            </p>
+
+        
+        
+            <p>
+                {{team_info.Description}}
+            <p>
+                {% for name in team_info.Team_Members %}
+                    <p>
+                        {{name}}
+                    </p>
+                {% endfor %}
+        </div>
+</body>
+
+{%endblock content%}

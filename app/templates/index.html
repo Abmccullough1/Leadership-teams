@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content%}
+<body class="main_paige">
+
+<div class="list_teams">
+  <a href="{% url "info" team_name="management"%}"><button class="manage_btn">Management</button></a>
+  <a href="{% url "info" team_name="documentation"%}"><button class="docu_btn">Documentation</button></a>
+  <a href="{% url "info" team_name="community"%}"><button class="com_btn">Community</button></a>
+  <a href="{% url "info" team_name="procurement"%}"><button class="pro_btn">Procurement</button></a>
+</body>
+{%endblock content%}
